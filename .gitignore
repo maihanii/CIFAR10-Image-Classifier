@@ -1,36 +1,13 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.log
+# Ignore folders but allow specific files
+data/*
+!data/summary.txt
 
-# Virtual environment
-venv/
-env/
+model/*
+!model/cifar10_cnn.keras
 
-# TensorFlow / Keras
-*.h5
-*.keras
-*.ckpt
-*.tflite
-checkpoint/
+plots/*
+!plots/sample_images.png
 
-# Data & Results
-data/
-results/
-plots/
-model/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-
-# Other
-*.zip
-*.tar.gz
-*.rar
+results/*
+!results/accuracy.png
+!results/loss.png

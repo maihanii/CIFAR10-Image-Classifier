@@ -1,0 +1,14 @@
+CIFAR-10 Dataset Summary (TensorFlow)
+Train samples: 50000
+Test samples: 10000
+Classes:
+ - airplane
+ - automobile
+ - bird
+ - cat
+ - deer
+ - dog
+ - frog
+ - horse
+ - ship
+ - truck
