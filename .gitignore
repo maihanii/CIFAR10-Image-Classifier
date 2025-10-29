@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Virtual environment
+venv/
+env/
+
+# TensorFlow / Keras
+*.h5
+*.keras
+*.ckpt
+*.tflite
+checkpoint/
+
+# Data & Results
+data/
+results/
+plots/
+model/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Other
+*.zip
+*.tar.gz
+*.rar
