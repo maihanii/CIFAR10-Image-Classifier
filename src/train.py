@@ -10,7 +10,7 @@ from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 os.makedirs("model", exist_ok=True)
 os.makedirs("results", exist_ok=True)
 
-print("🔹 Starting training phase for CIFAR-10 (TensorFlow version)...")
+print(" Starting training phase for CIFAR-10 (TensorFlow version)...")
 
 (x_train, y_train), (x_test, y_test) = keras.datasets.cifar10.load_data()
 classes = ['airplane','automobile','bird','cat','deer',
@@ -22,11 +22,11 @@ x_test = x_test.astype("float32") / 255.0
 y_train = to_categorical(y_train, 10)
 y_test = to_categorical(y_test, 10)
 
-print(f"✅ Data prepared successfully:")
+print(f" Data prepared successfully:")
 print(f"   x_train: {x_train.shape}, y_train: {y_train.shape}")
 print(f"   x_test: {x_test.shape}, y_test: {y_test.shape}")
 
-print("🧠 Building the CNN model...")
+print("Building the CNN model...")
 
 model = models.Sequential([
     layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
@@ -51,7 +51,7 @@ model.compile(
     metrics=['accuracy']
 )
 
-print("🚀 Training started... this might take a few minutes.")
+print(" Training started... this might take a few minutes.")
 
 
 callbacks = [
@@ -68,10 +68,10 @@ history = model.fit(
     verbose=1
 )
 
-print("✅ Training completed!")
+print("Training completed!")
 
 model.save("model/cifar10_cnn.keras")
-print("💾 Model saved successfully at model/cifar10_cnn.keras")
+print(" Model saved successfully at model/cifar10_cnn.keras")
 
 plt.figure(figsize=(8,4))
 plt.plot(history.history['accuracy'], label='train acc')
@@ -95,6 +95,6 @@ plt.tight_layout()
 plt.savefig("results/loss.png")
 plt.close()
 
-print("📊 Saved training plots to results/ folder.")
-print("🎉 Training phase finished successfully!")
+print("Saved training plots to results/ folder.")
+print("Training phase finished successfully!")
 
